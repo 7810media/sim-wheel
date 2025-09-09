@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Wheel Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>News Wheel Simulator</h1>
+  </header>
+
+  <main>
+    <!-- Monitors -->
+    <section id="monitors">
+      <div class="monitor">
+        <h2>Program Monitor</h2>
+        <video id="programVideo" width="400" controls>
+          <source src="assets/video1.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+      <div class="monitor">
+        <h2>Return Monitor</h2>
+        <video id="returnVideo" width="300" controls>
+          <source src="assets/video2.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+    </section>
+
+    <!-- Wheel -->
+    <section id="wheel">
+      <h2>Wheel</h2>
+      <div id="progressBar"><div id="progress"></div></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Slug</th>
+            <th>Router</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="status-green">
+            <td>22:11:31</td>
+            <td>PLAYING</td>
+            <td>Weather Toss</td>
+            <td>RAL WX</td>
+          </tr>
+          <tr class="status-red">
+            <td>22:12:06</td>
+            <td>ERROR</td>
+            <td>WX Feed Down</td>
+            <td>RAL RADAR</td>
+          </tr>
+          <tr class="status-blue">
+            <td>22:13:00</td>
+            <td>CUED</td>
+            <td>Sports</td>
+            <td>RAL SPORTS</td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="wheel-controls">
+        <button onclick="startProgress()">Play</button>
+        <button>Stop</button>
+        <button>Take Next</button>
+        <button>Jump</button>
+        <button>Resume</button>
+      </div>
+    </section>
+
+    <!-- RTS Buttons -->
+    <section id="rts">
+      <h2>RTS Panel</h2>
+      <div class="rts-grid">
+        <button class="rts-btn red">STOP</button>
+        <button class="rts-btn green">START</button>
+        <button class="rts-btn yellow">AUTO</button>
+        <button class="rts-btn blue">ROUTE</button>
+        <button class="rts-btn orange">MAIN</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
