@@ -1,91 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Wheel Simulator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>News Wheel Simulator</h1>
-  </header>
+<section id="wheel">
+  <h2>Wheel (2 Hours)</h2>
+  <div id="progressBar"><div id="progress"></div></div>
+  <table id="wheelTable">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Slug</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- A Block -->
+      <tr class="block-blue"><td>00:00</td><td>CUED</td><td>A Block - Headlines</td><td>08:00</td></tr>
+      <tr class="pause-pink"><td>00:07</td><td>PAUSE</td><td>Live Pause Event</td><td>01:00</td></tr>
 
-  <main>
-    <!-- Monitors -->
-    <section id="monitors">
-      <div class="monitor">
-        <h2>Program Monitor</h2>
-        <video id="programVideo" width="400" controls>
-          <source src="assets/video1.mp4" type="video/mp4">
-          Your browser does not support video.
-        </video>
-      </div>
-      <div class="monitor">
-        <h2>Return Monitor</h2>
-        <video id="returnVideo" width="300" controls>
-          <source src="assets/video2.mp4" type="video/mp4">
-          Your browser does not support video.
-        </video>
-      </div>
-    </section>
+      <!-- CX -->
+      <tr class="block-purple"><td>00:08</td><td>CUED</td><td>CX - Commercial Break</td><td>02:00</td></tr>
 
-    <!-- Wheel -->
-    <section id="wheel">
-      <h2>Wheel</h2>
-      <div id="progressBar"><div id="progress"></div></div>
-      <table>
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Status</th>
-            <th>Slug</th>
-            <th>Router</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="status-green">
-            <td>22:11:31</td>
-            <td>PLAYING</td>
-            <td>Weather Toss</td>
-            <td>RAL WX</td>
-          </tr>
-          <tr class="status-red">
-            <td>22:12:06</td>
-            <td>ERROR</td>
-            <td>WX Feed Down</td>
-            <td>RAL RADAR</td>
-          </tr>
-          <tr class="status-blue">
-            <td>22:13:00</td>
-            <td>CUED</td>
-            <td>Sports</td>
-            <td>RAL SPORTS</td>
-          </tr>
-        </tbody>
-      </table>
-      <div id="wheel-controls">
-        <button onclick="startProgress()">Play</button>
-        <button>Stop</button>
-        <button>Take Next</button>
-        <button>Jump</button>
-        <button>Resume</button>
-      </div>
-    </section>
+      <!-- B Block -->
+      <tr class="block-blue"><td>00:10</td><td>CUED</td><td>B Block - Local</td><td>08:00</td></tr>
+      <tr class="event-orange"><td>00:15</td><td>LIVE</td><td>Weather Event</td><td>03:00</td></tr>
 
-    <!-- RTS Buttons -->
-    <section id="rts">
-      <h2>RTS Panel</h2>
-      <div class="rts-grid">
-        <button class="rts-btn red">STOP</button>
-        <button class="rts-btn green">START</button>
-        <button class="rts-btn yellow">AUTO</button>
-        <button class="rts-btn blue">ROUTE</button>
-        <button class="rts-btn orange">MAIN</button>
-      </div>
-    </section>
-  </main>
+      <!-- CX -->
+      <tr class="block-purple"><td>00:18</td><td>CUED</td><td>CX - Commercial Break</td><td>02:00</td></tr>
 
-  <script src="script.js"></script>
-</body>
-</html>
+      <!-- C Block -->
+      <tr class="block-blue"><td>00:20</td><td>CUED</td><td>C Block - National</td><td>08:00</td></tr>
+
+      <!-- CX -->
+      <tr class="block-purple"><td>00:28</td><td>CUED</td><td>CX - Commercial Break</td><td>02:00</td></tr>
+
+      <!-- D Block -->
+      <tr class="block-blue"><td>00:30</td><td>CUED</td><td>D Block - Politics</td><td>08:00</td></tr>
+      <tr class="pause-pink"><td>00:36</td><td>PAUSE</td><td>Live Pause Event</td><td>01:00</td></tr>
+
+      <!-- CX -->
+      <tr class="block-purple"><td>00:38</td><td>CUED</td><td>CX - Commercial Break</td><td>02:00</td></tr>
+
+      <!-- E Block -->
+      <tr class="block-blue"><td>00:40</td><td>CUED</td><td>E Block - World</td><td>08:00</td></tr>
+      <tr class="event-orange"><td>00:44</td><td>LIVE</td><td>Weather Event</td><td>03:00</td></tr>
+
+      <!-- CX -->
+      <tr class="block-purple"><td>00:48</td><td>CUED</td><td>CX - Commercial Break</td><td>02:00</td></tr>
+
+      <!-- F Block -->
+      <tr class="block-blue"><td>00:50</td><td>CUED</td><td>F Block - Closing</td><td>08:00</td></tr>
+    </tbody>
+  </table>
+</section>
